@@ -1,31 +1,22 @@
 package microservices.book.multiplication.domain;
 
-public class Multiplication {
-	private int factorA;
-	private int factorB;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 
-	private int result;
+@RequiredArgsConstructor	// generates a constructor taking all the final fields
+@Getter						// generates all the getters for our fields
+@ToString					// includes a human-friendly toString() method
+@EqualsAndHashCode			// creates the equals(0 and hashCode() methods
+public final class Multiplication {
+	private final int factorA;
+	private final int factorB;
 
-	public Multiplication(int factorA, int factorB) {
-		this.factorA = factorA;
-		this.factorB = factorB;
-		this.result = factorA * factorB;
+
+	//empty constructor for JSON (de)serialization
+	public Multiplication() {
+		this(0, 0);
 	}
 
-	public int getFactorA() {
-		return factorA;
-	}
-
-	public int getFactorB() {
-		return factorB;
-	}
-
-	public int getResult() {
-		return result;
-	}
-
-	@Override
-	public String toString() {
-		return "Multiplication{" + "factorA=" + factorA + ", factorB=" + factorB + ", result(A * B)=" + result + "}";
-	}
 }

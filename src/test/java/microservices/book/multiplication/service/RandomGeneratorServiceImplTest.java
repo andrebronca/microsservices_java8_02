@@ -9,7 +9,6 @@ import java.util.stream.IntStream;
 import org.junit.Before;
 import org.junit.Test;
 
-
 class RandomGeneratorServiceImplTest {
 
 	private RandomGeneratorServiceImpl randomGeneratorServiceImpl;
@@ -17,10 +16,6 @@ class RandomGeneratorServiceImplTest {
 	@Before
 	public void setUp() {
 		randomGeneratorServiceImpl = new RandomGeneratorServiceImpl();
-	}
-	
-	public RandomGeneratorServiceImplTest() {
-		// TODO Auto-generated constructor stub
 	}
 	
 	@Test
